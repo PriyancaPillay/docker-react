@@ -1,0 +1,11 @@
+language: generic
+
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t priyancapillay/docker-react -f Dev.Dockerfile .
+
+script:
+  -  docker run -e CI=true priyancapillay/docker-react npm run test
