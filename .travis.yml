@@ -5,7 +5,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t PriyancaPillay/docker-react -f Dev.Dockerfile .
+  - docker build -t priyancapillay/docker-react -f Dev.Dockerfile .
 
 script:
-  -  docker run -e CI=true PriyancaPillay/docker-react npm run test
+  -  docker run -e CI=true priyancapillay/docker-react npm run test
